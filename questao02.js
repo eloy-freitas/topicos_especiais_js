@@ -2,13 +2,15 @@ function questao02(){
     timestamp = new Date()
     const hora = timestamp.getHours()
 
+    document.body.removeAttribute("style")
+
     if(hora >= 6 && hora < 12)
-        console.log("manhã")
+        document.body.classList.add("manha")
     else if(hora >= 12 && hora < 18)
-        console.log("tarde")
+        document.body.classList.add("tarde")
     else if (hora >= 18 && hora < 24)
-        console.log("noite")
+        document.body.classList.add("noite")
     else if(hora >= 0 && hora < 6)
-        console.log("madrugada")
-    console.log(hora)
+        document.body.classList.add("madrugada")
+    
 }
