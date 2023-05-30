@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>exercicio 1</title>
+    <script src="script.js"></script>
+    <style>
+        table, tr, th {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body onload="iniciarLista()">
+    <form id="frmCadastro">
+        <label>Título</label><br>
+        <input type="text" id="txtTitulo" name="titulo"><br>
+        <label>Ordem</label><br>
+        <input type="text" id="txtOrdem" name="ordem"><br>
+        <label>Editora</label><br>
+        <input type="text" id="txtEditora" name="editora"><br>
+        <label>Valor locação</label><br>
+        <input type="text" id="txtLocacao" name="locacao"><br>
+        <label>Tipo</label><br>
+        <input type="text" id="txtTipo" name="tipo"><br>
+        <label>Quantidade</label><br>
+        <input type="text" id="txtQuantidade" name="quantidade"><br>
+        <input type="button" id="btnCadastrar" value="Cadastrar" onclick="cadastrarLivro()">
+    </form>  
+    <br>
+    <br>
+    <body onload="">
+        <form id="frmBaixa">
+            <label>Ordem</label><br>
+            <input type="text" id="txtBuscaOrdem" name="ordem"><br>
+            <label>Quantidade</label><br>
+            <input type="text" id="txtQuantidadeBaixa" name="quantidade"><br>
+            <input type="button" id="btnDarBaixa" value="Cadastrar" onclick="darBaixa()">
+    </form>
+    <br>
+    <br>
+    <table id="tabela">
+        <tr>
+            <th>Titulo</th>
+            <th>Ordem</th>
+            <th>Editora</th>
+            <th>Locação</th>
+            <th>Tipo</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </table>
+
+</body>
+</html>
