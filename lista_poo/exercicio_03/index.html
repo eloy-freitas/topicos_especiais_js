@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>exercicio 3</title>
+    <script src="script.js"></script>
+    <style>
+        table, tr, th {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body onload="iniciarLista()">
+    <form id="frmCadastro">
+        <label>Nome</label><br>
+        <input type="text" id="txtNome" name="Nome"><br>
+        <label>Cargo</label><br>
+        <input type="text" id="txtCargo" name="Cargo"><br>
+        <label>Departamento</label><br>
+        <input type="text" id="Departamento" name="Departamento"><br>
+        <label>Numero de Dependentes</label><br>
+        <input type="text" id="txtNumeroDependentes" name="NumeroDependentes"><br>
+        <label>Ano de Admissao</label><br>
+        <input type="text" id="txtAnoAdmissao" name="AnoAdmissao"><br>
+        <label>Idade</label><br>
+        <input type="text" id="txtIdade" name="Idade"><br>
+        <input type="button" id="btnCadastrar" value="Cadastrar" onclick="cadastrarLivro()">
+    </form>  
+    <br>
+    <br>
+        <form id="frmBaixa">
+            <label>Buscar Funcionário</label><br>
+            <select name="selectFuncionario" id="selectFuncionario">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="button" id="AlterarSalario" value="Alterar Salario" onclick="darBaixa()">
+    </form>
+    <br>
+    <br>
+    <button id="btnCalcularGratificacao", name="btnCalcularGratificacao" onclick="">Calcular Gratificacao</button>
+    <br>
+    <br>
+    <table id="tabela">
+        <tr>
+            <tr>Nome</tr>
+            <tr>Cargo</tr>
+            <tr>Departamento</tr>
+            <tr>Numero de Dependentes</tr>
+            <tr>Ano de Admissao</tr>
+            <tr>Idade</tr>
+        </tr>
+    </table>
+
+</body>
+</html>
