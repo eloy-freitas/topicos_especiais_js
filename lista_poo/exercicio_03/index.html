@@ -4,53 +4,63 @@
     <script src="script.js"></script>
     <style>
         table, tr, th {
-            border: 1px solid black
+            border: 1px solid black;
         }
     </style>
 </head>
-<body onload="iniciarLista()">
+<body onload="">
     <form id="frmCadastro">
+        <label>Código</label><br>
+        <input type="text" id="txtCodigo" name="Codigo" disabled="true"><br>
         <label>Nome</label><br>
-        <input type="text" id="txtNome" name="Nome"><br>
+        <input type="text" id="txtNome" name="Nome" value="Eloy"><br>
         <label>Cargo</label><br>
-        <input type="text" id="txtCargo" name="Cargo"><br>
+        <input type="text" id="txtCargo" name="Cargo" value="Analista"><br>
         <label>Departamento</label><br>
-        <input type="text" id="Departamento" name="Departamento"><br>
+        <input type="text" id="txtDepartamento" name="Departamento" value="TI"><br>
         <label>Numero de Dependentes</label><br>
-        <input type="text" id="txtNumeroDependentes" name="NumeroDependentes"><br>
+        <input type="text" id="txtNumeroDependentes" name="NumeroDependentes" value="2"><br>
         <label>Ano de Admissao</label><br>
-        <input type="text" id="txtAnoAdmissao" name="AnoAdmissao"><br>
+        <input type="text" id="txtAnoAdmissao" name="AnoAdmissao" value="2023"><br>
         <label>Idade</label><br>
-        <input type="text" id="txtIdade" name="Idade"><br>
-        <input type="button" id="btnCadastrar" value="Cadastrar" onclick="cadastrarLivro()">
+        <input type="text" id="txtIdade" name="Idade" value="25"><br>
+        <label>Salario base</label><br>
+        <input type="text" id="txtSalarioBase" name="SalarioBase" value="100000"><br>
+        <input type="button" id="btnCadastrar" value="Salvar" onclick="cadastrarFuncionario()">
+        <input type="button" id="btnCalcularSalario" value="Calcular Salário" disabled="true" onclick="calcularSalario()">
     </form>  
     <br>
     <br>
-        <form id="frmBaixa">
-            <label>Buscar Funcionário</label><br>
-            <select name="selectFuncionario" id="selectFuncionario">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-            </select>
-            <input type="button" id="AlterarSalario" value="Alterar Salario" onclick="darBaixa()">
+    <form id="frmAlterarSalario">
+        <label>Alterar Salario por ID</label><br>
+        <input type="text" id="txtBuscaIdFuncionario" name="txtBuscaIdFuncionario"><br>
+        <input type="button" id="btnBuscarFuncionário" value="Buscar Funcionário" onclick="carregarFuncionario()">
     </form>
     <br>
     <br>
-    <button id="btnCalcularGratificacao", name="btnCalcularGratificacao" onclick="">Calcular Gratificacao</button>
+    <form id="frmCalcularSalario">
+        <label>Calcular Salario por Nome</label><br>
+        <input type="text" id="txtBuscaNomeFuncionario" name="txtBuscaNomeFuncionario"><br>
+        <input type="button" id="btnBuscarNomeFuncionário" value="Buscar Funcionário" onclick="carregarFuncionarioCalculaSalario()">
+    </form>
+    <br>
+    <br>
+    <button id="btnCalcularGratificacao", name="btnCalcularGratificacao" onclick="calcularTodasGratificacaoes()">Calcular Gratificacao</button>
     <br>
     <br>
     <table id="tabela">
         <tr>
-            <tr>Nome</tr>
-            <tr>Cargo</tr>
-            <tr>Departamento</tr>
-            <tr>Numero de Dependentes</tr>
-            <tr>Ano de Admissao</tr>
-            <tr>Idade</tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Departamento</th>
+            <th>Numero de Dependentes</th>
+            <th>Ano de Admissao</th>
+            <th>Idade</th>
+            <th>Salario Base</th>
+            <th>Salario Liquido</th>
+            <th>Gratificação</th>
         </tr>
     </table>
-
 </body>
 </html>
