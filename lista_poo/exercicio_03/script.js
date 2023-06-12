@@ -4,8 +4,7 @@ document.funcionarios = [];
 document.cargos = {
     'Tecnico': 500,
     'Analista': 800,
-    'Projetista': 1100,
-    'Dona da firma': 20000
+    'Projetista': 1100
 };
 
 class Funcionario{
@@ -167,6 +166,7 @@ function calcularTodasGratificacaoes(){
     })
     limparTabela()
     desenharTabela()
+    document.getElementById('btnCalcularSalario').disabled = true
 }
 
 function lerCamposSalario(){
